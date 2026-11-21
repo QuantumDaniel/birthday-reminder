@@ -35,14 +35,7 @@ export function createSampleBirthdays(today = new Date()) {
   const otherMonth = (offset) => ((m - 1 + offset + 12) % 12) + 1;
 
   const people = [
-    { name: 'Joshua Daniel', day: d, month: m, year: 1998 },
-    { name: 'Daniel James', day: inThisMonth(d + 3), month: m, year: 2001 },
-    { name: 'Ezekiel John', day: inThisMonth(d + 10), month: m, year: 1999 },
-    { name: 'Amara Okafor', day: inThisMonth(d > 7 ? d - 6 : 1), month: m, year: 1995 },
-    { name: 'Sarah Bello', day: 10, month: otherMonth(1), year: 2000 },
-    { name: 'David Musa', day: 22, month: otherMonth(3), year: 1997 },
-    { name: 'Grace Adeyemi', day: 14, month: otherMonth(-2), year: 2003 },
-    { name: 'Leap-Day Luke', day: 29, month: 2, year: isLeapYear(2000) ? 2000 : 1996 },
+
   ];
 
   return people.map((p, i) => ({ id: i + 1, photo: avatar(i), isSample: true, ...p }));

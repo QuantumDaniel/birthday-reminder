@@ -51,7 +51,7 @@ export default function Dashboard({
         <div className="section-head">
           <div>
             <p className="eyebrow">{isCurrent ? "This Month's Birthdays" : 'Browsing birthdays'}</p>
-            <h2 id="month-heading" className="section-title">🎉 {monthName} Birthdays</h2>
+            <h2 id="month-heading" className="section-title"> {monthName} Birthdays</h2>
           </div>
           <button type="button" className="btn btn-brand d-none d-md-inline-flex" onClick={onAdd}>
             <FaPlus aria-hidden="true" /> Add Birthday

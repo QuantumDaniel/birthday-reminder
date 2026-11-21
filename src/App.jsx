@@ -104,7 +104,7 @@ export default function App() {
       </main>
 
       <footer className="app-footer">
-        Made with <span aria-label="love">♥</span> · Your birthdays are stored privately in this browser only.
+        Built by <strong>Quantum Daniel</strong> <span aria-label="love">♥</span> · Your birthdays are stored privately in this browser only.
       </footer>
 
       {editor && <BirthdayModal person={editor.person} today={today} onSave={handleSave} onClose={closeEditor} />}
