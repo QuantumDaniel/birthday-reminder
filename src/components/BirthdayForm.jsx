@@ -1,6 +1,7 @@
 import { useId, useState } from 'react';
 import ImageUploader from './ImageUploader.jsx';
 import { MONTHS, daysInMonth, isLeapYear, isValidDate } from '../utils/dateUtils.js';
+import './BirthdayForm.css';
 
 const MIN_YEAR = 1900;
 
@@ -81,8 +82,10 @@ export default function BirthdayForm({ person, today, onSave, onCancel }) {
     ) : null;
 
   return (
-    <form onSubmit={submit} noValidate>
+    <form onSubmit={submit} noValidate className="needs-validation">
       <div className="modal-body">
+
+
         <ImageUploader value={photo} name={values.name} onChange={setPhoto} onBusyChange={setUploading} />
 
         <div className="row g-3 mt-1">
@@ -92,7 +95,7 @@ export default function BirthdayForm({ person, today, onSave, onCancel }) {
               {...field('name')}
               type="text"
               className={`form-control${errors.name ? ' is-invalid' : ''}`}
-              placeholder="e.g. Joshua Daniel"
+              placeholder="e.g. Quantum Daniel"
               value={values.name}
               onChange={set('name')}
               maxLength={80}
@@ -154,8 +157,12 @@ export default function BirthdayForm({ person, today, onSave, onCancel }) {
         <button type="button" className="btn btn-light" onClick={onCancel}>Cancel</button>
         <button type="submit" className="btn btn-brand" disabled={uploading}>
           {uploading ? 'Processing picture…' : 'Save Birthday'}
+          Submit
         </button>
+
+
       </div>
+
     </form>
   );
 }
